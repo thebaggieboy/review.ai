@@ -6,14 +6,16 @@ import { MessageSquare, Star, Zap, Clock, ThumbsUp, BarChart3 } from "lucide-rea
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center">
+    
+      <header className="border-b">
+        <div className="container flex h-14 items-center justify-between px-4 md:px-6">
           <Link href="/" className="flex items-center gap-2 font-semibold">
             <MessageSquare className="h-6 w-6 text-emerald-500" />
-            <span>reviews.ai</span>
+            <span>review.ai</span>
           </Link>
-          <nav className="ml-auto flex gap-4">
-            <Link href="#problem" className="text-sm font-medium hover:underline">
+          <nav className="hidden gap-8 md:flex">
+
+          <Link href="#problem" className="text-sm font-medium hover:underline">
               Problem
             </Link>
             <Link href="#solution" className="text-sm font-medium hover:underline">
@@ -25,14 +27,17 @@ export default function LandingPage() {
             <Link href="#pricing" className="text-sm font-medium hover:underline">
               Pricing
             </Link>
+            <Link href="#about" className="text-sm font-medium hover:underline">
+              About
+            </Link>
           </nav>
-          <div className="ml-4 flex gap-2">
-            <Link href="/signin">
+          <div className="flex gap-4">
+            <Link href="/login">
               <Button variant="ghost" size="sm">
                 Sign In
               </Button>
             </Link>
-            <Link href="/signup">
+            <Link href="/register">
               <Button size="sm">Get Started</Button>
             </Link>
           </div>
